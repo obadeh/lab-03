@@ -44,23 +44,6 @@ function populateSelectBox() {
 
   console.log(seen);
 }
-<<<<<<< HEAD
-
-$('select').on('change', function() {
-  let selected = $(this).val();
-  $('div').hide();
-  $(`.${selected}`).fadeIn(800);
-});
-
-$.get('../data/page-2.json')
-  .then( data => {
-    data.forEach( (thing) => {
-      let horn = new Horns(thing);
-      horn.render();
-    });
-  })
-  .then( () => populateSelectBox() );
-=======
 $("#pageSelect").on('change', function () {
  let selectedPge = $(this).val();
  console.log('selectedPge : ', selectedPge);
@@ -96,4 +79,3 @@ $("#pageSelect").on('change', function () {
    })
  }
 })
->>>>>>> 3b60239404d5477b16c2de01a6900c95b32504ca
