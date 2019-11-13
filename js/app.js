@@ -65,6 +65,8 @@ $("#pageSelect").on('change', function () {
 
  if (selectedPge === 'page1') {
   Horns.all = [];
+  $('div').remove();
+
 
    $.get('../data/page-1.json')
      .then(data => {
@@ -88,6 +90,7 @@ $("#pageSelect").on('change', function () {
 
  else {
   Horns.all = [];
+  $('div').remove();
 
    $.get('../data/page-2.json')
      .then(data => {
