@@ -33,9 +33,9 @@ Horns.prototype.render = function() {
 
 function populateSelectBox() {
   let seen = {};
-  let select = $('select');
+  let select = $("#type");
   Horns.all.forEach( (horn) => {
-    if ( ! seen[horn.keyword] ) {
+     if ( ! seen[horn.keyword] ) {
       let option = `<option value="${horn.keyword}">${horn.keyword}</option>`;
       select.append(option);
       seen[horn.keyword] = true;
@@ -44,18 +44,38 @@ function populateSelectBox() {
 
   console.log(seen);
 }
-
-$('select').on('change', function() {
-  let selected = $(this).val();
-  $('div').hide();
-  $(`.${selected}`).fadeIn(800);
-});
-
-$.get('../data/page-1.json')
-  .then( data => {
-    data.forEach( (thing) => {
-      let horn = new Horns(thing);
-      horn.render();
-    });
-  })
-  .then( () => populateSelectBox() );
+$("#pageSelect").on('change', function () {
+ let selectedPge = $(this).val();
+ console.log('selectedPge : ', selectedPge);
+ $('div').hide();
+ if (selectedPge === 'page1') {
+   $.get('../data/page-1.json')
+     .then(data => {
+       data.forEach((thing) => {
+         let horn = new Horns(thing);
+         horn.render();
+       });
+     })
+     .then(() => populateSelectBox());
+   $("#type").on('change', function () {
+     let selectedPge1 = $(this).val();
+     $('div').hide();
+     $(`.${selectedPge1}`).fadeIn(800);
+   })
+ }
+ else {
+   $.get('../data/page-2.json')
+     .then(data => {
+       data.forEach((thing) => {
+         let horn = new Horns(thing);
+         horn.render();
+       });
+     })
+     .then(() => populateSelectBox());
+   $("#type").on('change', function () {
+     let selectedPge2 = $(this).val();
+     $('div').hide();
+     $(`.${selectedPge2}`).fadeIn(800);
+   })
+ }
+})
