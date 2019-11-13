@@ -1,0 +1,10 @@
+div {
+    float: left;
+    height: 250px;
+    margin: 2em;
+    width: 250px;
+  }
+  
+  main {
+    overflow:hidden;
+  }
