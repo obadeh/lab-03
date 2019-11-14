@@ -6,4 +6,11 @@ div {
     max-width: 150px;
   }
   
+  body{
+     background-color: azure;
+    /* background: linear-gradient( #fff, #ccc ); */
+    /* transition: all 0.45s; */
+  
+    /* background-image: linear-gradient(to bottom, red, #f06d06); */ */
+  }
   

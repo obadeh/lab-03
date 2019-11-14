@@ -8,3 +8,10 @@ div {
   main {
     overflow:hidden;
   }
+
+  h1{
+    font-size: 38px;
+    font-family: cursive;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
