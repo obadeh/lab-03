@@ -52,6 +52,8 @@ Animal.loadAnimals = () => {
   Animal.pageSelect();
 };
 
+// render the animlals by handlebars
+
 Animal.prototype.toHtml = function() {
   const $template = $('#animal-template').html();
   const $source = Handlebars.compile($template);
