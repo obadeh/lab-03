@@ -1,17 +1,75 @@
-div {
-    float: left;
-    height: 250px;
-    margin: 2em;
-    width: 250px;
-  }
-  
-  main {
-    overflow:hidden;
-  }
+body {
+  width: 95vw;
+}
 
-  h1{
-    font-size: 38px;
-    font-family: cursive;
-    margin-bottom: 25px;
-    margin-top: 25px;
-  }
+main {
+  margin-left: 100px;
+  max-height: 2500px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: space-around;
+}
+
+select {
+  margin: 50px auto 0px auto;
+}
+
+header {
+  margin: 50px auto;
+  text-align: center;
+}
+
+div h3 {
+  float: left;
+  width: 200px;
+}
+
+main {
+  clear: both;
+}
+
+section {
+  box-sizing: border-box;
+  width: 420px;
+  height: 300px;
+  box-sizing: border-box;
+  margin: 15px;
+  border: 2px solid darkslategray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section div {
+  width: 95%;
+  height: 67%;
+  margin: 10px auto;
+}
+
+section p {
+  padding: 10px
+}
+
+section img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+#photo-template {
+  position: absolute;
+}
+
+footer {
+  clear: both;
+}
+
+#button{
+  text-align: center;
+}
